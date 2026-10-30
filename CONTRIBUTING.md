@@ -15,7 +15,7 @@ project.
 If you or your current employer have already signed the Google CLA (even if it
 was for a different project), you probably don't need to do it again.
 
-Visit <https://cla.developers.google.com/> to see your current agreements or to
+Visit <https://cla.developers.google.com/about> to see your current agreements or to
 sign a new one.
 
 ### Review our Community Guidelines
@@ -28,5 +28,5 @@ Guidelines](https://opensource.google/conduct/).
 ### Code Reviews
 
 All submissions, including submissions by project members, require review. We
-use [GitHub pull requests](https://docs.github.com/articles/about-pull-requests)
+use [GitHub pull requests](https://docs.github.com/en/pull-requests/reference/pull-requests)
 for this purpose.

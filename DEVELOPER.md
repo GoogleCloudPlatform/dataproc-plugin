@@ -19,8 +19,8 @@ This extension uses **Agent Skills** to interact with Firestore. The development
 1.  **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/gemini-cli-extensions/dataproc.git
-    cd dataproc
+    git clone https://github.com/GoogleCloudPlatform/dataproc-plugin.git
+    cd dataproc-plugin
     ```
 
 2.  **Install the Extension Locally:** Use the Gemini CLI to install the
@@ -63,8 +63,8 @@ The skills themselves are validated using the `skills-validate.yml` workflow.
 
 The primary maintainers for this repository are defined in the [`.github/CODEOWNERS`](.github/CODEOWNERS) file:
 
-*   `@gemini-cli-extensions/senseai-eco`
-*   `@gemini-cli-extensions/dataproc-maintainers`
+*   `@GoogleCloudPlatform/senseai-eco`
+*   `@GoogleCloudPlatform/dataproc-plugin-maintainers`
 
 ### Releasing
 

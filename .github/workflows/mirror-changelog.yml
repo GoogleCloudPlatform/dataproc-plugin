@@ -17,10 +17,16 @@ name: Mirror Toolbox Changelog
 on:
   pull_request_target:
     types: [opened, edited]
+    branches: [main]
+
+permissions: {}
 
 jobs:
   add-release-notes:
-    if: github.actor == 'renovate-bot' && startsWith(github.head_ref, 'renovate/googleapis-mcp-toolbox')
+    if: >-
+      github.event.pull_request.user.login == 'renovate-bot' &&
+      github.event.pull_request.head.repo.owner.login == 'renovate-bot' &&
+      startsWith(github.head_ref, 'renovate/googleapis-mcp-toolbox')
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
