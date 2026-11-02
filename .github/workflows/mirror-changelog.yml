@@ -15,7 +15,7 @@
 name: Mirror Toolbox Changelog
 
 on:
-  pull_request_target:
+  pull_request_target: # zizmor: ignore[dangerous-triggers] - needs write token on renovate-bot fork PRs; never checks out or runs PR code
     types: [opened, edited]
     branches: [main]
 
@@ -26,7 +26,7 @@ jobs:
     if: >-
       github.event.pull_request.user.login == 'renovate-bot' &&
       github.event.pull_request.head.repo.owner.login == 'renovate-bot' &&
-      startsWith(github.head_ref, 'renovate/googleapis-mcp-toolbox')
+      startsWith(github.head_ref, 'renovate/toolbox')
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
