@@ -3,7 +3,7 @@
 > [!NOTE]
 > Currently in beta (pre-v1.0), and may see breaking changes until the first stable release (v1.0).
 
-This repository packages [MCP Toolbox](https://github.com/googleapis/mcp-toolbox)'s prebuilt `dataproc` server as a plugin/extension to interact with [Dataproc](https://cloud.google.com/dataproc) clusters and jobs. It can be used with various AI agents, including [Antigravity](https://antigravity.google/), [Claude Code](https://claude.com/product/claude-code) and [Codex](https://developers.openai.com/codex), to manage your clusters, monitor jobs, and troubleshoot issues using natural language prompts.
+This repository packages [MCP Toolbox](https://github.com/googleapis/mcp-toolbox)'s prebuilt `dataproc` server as a plugin/extension to interact with [Dataproc](https://cloud.google.com/products/managed-service-for-apache-spark) clusters and jobs. It can be used with various AI agents, including [Antigravity](https://antigravity.google/), [Claude Code](https://claude.com/product/claude-code) and [Codex](https://learn.chatgpt.com/docs), to manage your clusters, monitor jobs, and troubleshoot issues using natural language prompts.
 
 > [!IMPORTANT]
 > **We Want Your Feedback!**
@@ -43,10 +43,10 @@ Before you begin, ensure you have the following:
      - [Antigravity CLI](https://github.com/google-gemini/gemini-cli) version **v1.6.0** or higher
      - [Antigravity 2.0](https://antigravity.google/product/antigravity-2) version **v2.0.0** or higher.
   - [Claude Code](https://claude.com/product/claude-code) version **v2.1.94** or higher.
-  - [Codex](https://developers.openai.com/codex) **v0.117.0** or higher.
-- [Node.js](https://nodejs.org/) — the MCP server runs via `npx`.
+  - [Codex](https://learn.chatgpt.com/docs) **v0.117.0** or higher.
+- [Node.js](https://nodejs.org/en) — the MCP server runs via `npx`.
 - A Google Cloud project with the **Dataproc API** enabled.
-- Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
+- Ensure [Application Default Credentials](https://docs.cloud.google.com/sdk/docs/authenticate) are available in your environment.
 - IAM Permissions:
   - Dataproc Viewer (`roles/dataproc.viewer`) or Dataproc Editor (`roles/dataproc.editor`)
 
@@ -61,7 +61,7 @@ Please keep these env vars handy during the installation process:
 
 > [!NOTE]
 >
-> - Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
+> - Ensure [Application Default Credentials](https://docs.cloud.google.com/sdk/docs/authenticate) are available in your environment.
 > - If your Cloud SQL for PostgreSQL instance uses private IPs, you must run your agent in the same Virtual Private Cloud (VPC) network.
 
 
@@ -71,7 +71,7 @@ To start interacting with your database, install the extension for your preferre
 
 For the latest version, check the [releases page][releases].
 
-[releases]: https://github.com/gemini-cli-extensions/dataproc/releases
+[releases]: https://github.com/GoogleCloudPlatform/dataproc-plugin/releases
 
 <!-- {x-release-please-start-version} -->
 
@@ -101,7 +101,7 @@ See <a href="https://antigravity.google/docs/gcli-migration">Migrating from Gemi
 Install the plugin directly from the remote GitHub repository:
 
 ```bash
-agy plugin install https://github.com/gemini-cli-extensions/dataproc
+agy plugin install https://github.com/GoogleCloudPlatform/dataproc-plugin
 ```
 
 **2. Set env vars:**
@@ -116,7 +116,7 @@ You can install plugins directly from a remote GitHub repository.
 **1. Install the plugin:**
 
 ```bash
-agy plugin install https://github.com/gemini-cli-extensions/dataproc
+agy plugin install https://github.com/GoogleCloudPlatform/dataproc-plugin
 ```
 
 **2. Set env vars:**
@@ -176,7 +176,7 @@ codex plugin marketplace upgrade data-cloud-plugins
 This repository is a valid [Agent Plugins](https://github.com/agentplugins/agent-plugins-spec) (v1) plugin. Any [Agent Plugins–compatible client](https://agent-plugins.org/compatible-clients) can install it directly using its own built-in plugin command — no extra tooling required — by pointing at this repository:
 
 ```
-https://github.com/gemini-cli-extensions/dataproc
+https://github.com/GoogleCloudPlatform/dataproc-plugin
 ```
 
 Beyond harnesses covered by the native install above, compatible clients include VS Code, Cursor, GitHub Copilot, and Kiro. See your agent's documentation for its exact install command.
@@ -237,5 +237,5 @@ Use the debug mode of your agent (e.g., `gemini --debug`) to enable debugging.
 
 Common issues:
 
-- "failed to find default credentials": Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
+- "failed to find default credentials": Ensure [Application Default Credentials](https://docs.cloud.google.com/sdk/docs/authenticate) are available in your environment.
 - "cannot execute binary file": The Toolbox binary did not download correctly.
